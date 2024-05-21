@@ -1,0 +1,9 @@
+<div class="traffic-lights">
+    <app-traffic-light direction="row" color="green" [accident]="accident"></app-traffic-light>
+    <div class="column-traffic-lights">
+        <app-traffic-light direction="column" color="red" [accident]="accident"></app-traffic-light>
+        <button (click)="onAccidentClick()" [disabled]="!accidentButtonActive">Авария</button>
+        <app-traffic-light direction="column" color="red" [accident]="accident"></app-traffic-light>
+    </div>
+    <app-traffic-light direction="row" color="green" [accident]="accident"></app-traffic-light>
+</div>

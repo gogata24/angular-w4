@@ -1,0 +1,8 @@
+<div class="container" [ngStyle]="{'flex-direction': this.direction}">
+    <div class="traffic-light" [ngStyle]="getStyling()">
+        <div class="circle red" [ngClass]="{'active': color == 'red'}"></div>
+        <div class="circle yellow" [ngClass]="{'active': color == 'yellow'}"></div>
+        <div class="circle green" [ngClass]="{'active': color == 'green'}"></div>
+    </div>
+    <button (click)="onCrossClick()" [disabled]="color == 'red' || accident">Пресечи</button>
+</div>
